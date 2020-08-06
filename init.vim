@@ -9,19 +9,20 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'     
 	Plug 'morhetz/gruvbox'    
 	Plug 'itchyny/lightline.vim'
-
+	Plug 'sainnhe/edge'
 
 call plug#end()
 
+"colorscheme monokai
 colorscheme gruvbox 
 
 " NERDTree opts
-"autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+map <C-t> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-
+set mouse=a
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -43,3 +44,4 @@ set laststatus=2
 set noshowmode
 set ruler
 set number
+

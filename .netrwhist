@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='C:/Users/User/AppData/Local/nvim'
+let g:netrw_dirhist_9='C:/Users/User/AppData/Local'
+let g:netrw_dirhist_8='C:\Users\User\AppData\Local\Far Manager'
+let g:netrw_dirhist_7='c:/Users/User'
+let g:netrw_dirhist_6='c:/Users'
+let g:netrw_dirhist_5='c:/'
+let g:netrw_dirhist_4='c:/$GetCurrent'
+let g:netrw_dirhist_3='c:/'
+let g:netrw_dirhist_2='c:/users'
+let g:netrw_dirhist_1='c:\users'
