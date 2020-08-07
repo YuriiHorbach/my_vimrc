@@ -10,6 +10,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'morhetz/gruvbox'    
 	Plug 'itchyny/lightline.vim'
 	Plug 'sainnhe/edge'
+	Plug 'mattn/emmet-vim'
+	Plug 'neoclide/coc.nvim'
 
 call plug#end()
 
