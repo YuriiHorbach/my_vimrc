@@ -46,4 +46,3 @@ set laststatus=2
 set noshowmode
 set ruler
 set number
-
