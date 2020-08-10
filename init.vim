@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'mattn/emmet-vim'
-	Plug 'neoclide/coc.nvim'
 	Plug 'junegunn/fzf'
  	Plug 'matze/vim-move'
 	Plug 'terryma/vim-multiple-cursors'
@@ -11,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'itchyny/lightline.vim'
 	Plug 'sainnhe/edge'
 	Plug 'mattn/emmet-vim'
-	Plug 'neoclide/coc.nvim'
 
 call plug#end()
 
@@ -23,6 +21,18 @@ autocmd vimenter * NERDTree
 map <C-t> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let g:NERDTreeDirArrows=0
+
+
+function! SuperCleverTab()
+    if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+        return "\<Tab>"
+    else
+        return "\<C-p>"
+    endif
+endfunction
+
+inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
 set mouse=a
 set tabstop=2
@@ -46,3 +56,4 @@ set laststatus=2
 set noshowmode
 set ruler
 set number
+set ma
