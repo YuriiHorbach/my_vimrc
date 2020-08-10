@@ -10,7 +10,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'itchyny/lightline.vim'
 	Plug 'sainnhe/edge'
 	Plug 'mattn/emmet-vim'
-
+	Plug 'andrewradev/splitjoin.vim'
+  Plug 'AndrewRadev/sideways.vim'
+  Plug 'AndrewRadev/tagalong.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "colorscheme monokai
@@ -57,3 +60,5 @@ set noshowmode
 set ruler
 set number
 set ma
+
+:CocInstall coc-tsserver coc-json
