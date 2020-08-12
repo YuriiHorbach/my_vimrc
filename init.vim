@@ -10,14 +10,29 @@ call plug#begin('~/.vim/plugged')
 	Plug 'itchyny/lightline.vim'
 	Plug 'sainnhe/edge'
 	Plug 'mattn/emmet-vim'
-	Plug 'andrewradev/splitjoin.vim'
+	"Plug 'andrewradev/splitjoin.vim'
   Plug 'AndrewRadev/sideways.vim'
   Plug 'AndrewRadev/tagalong.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "colorscheme monokai
-colorscheme gruvbox 
+colorscheme gruvbox
+
+"emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key=',' 
+"slet g:user_emmet_leader_key='<Tab>' 
+"let g:tagalong_verbose = 1
+
+"tagalong
+"let g:tagalong_filetypes = ['html']
+
+
+
+
+
 
 " NERDTree opts
 autocmd vimenter * NERDTree
@@ -44,14 +59,16 @@ set softtabstop=2
 set expandtab
 set paste
 set smartindent
+
 " highlight searche
 set hlsearch
+
 " case insensitive search
 set ignorecase
 set smartcase
+
 " ask to save
 set confirm
-"set number
 syntax on
 
 " display lightline
@@ -61,4 +78,9 @@ set ruler
 set number
 set ma
 
-:CocInstall coc-tsserver coc-json
+
+" Автоматическое закрытие скобок
+"imap [ []<LEFT>
+"imap ( ()<LEFT>
+"nimap { {}<LEFT>
+
