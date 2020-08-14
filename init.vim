@@ -15,7 +15,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'AndrewRadev/sideways.vim'
   Plug 'AndrewRadev/tagalong.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+  Plug 'yggdroot/indentline'
+  Plug 'tpope/vim-endwise'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
+  
 call plug#end()
 
 "colorscheme monokai
@@ -57,6 +61,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smartindent
+set smartindent
 
 " highlight searche
 set hlsearch
@@ -75,4 +80,10 @@ set noshowmode
 set ruler
 set number
 
+"for ruby
+filetype plugin indent on
+filetype on
+filetype indent on
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
