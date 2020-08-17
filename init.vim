@@ -19,8 +19,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-endwise'
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
-  
-call plug#end()
+  Plug 'captbaritone/better-indent-support-for-php-with-html'
+  Plug 'valloric/matchtagalways'
+  call plug#end()
 
 "colorscheme monokai
 colorscheme gruvbox
@@ -81,9 +82,9 @@ set ruler
 set number
 
 "for ruby
-filetype plugin indent on
-filetype on
-filetype indent on
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
-
+"filetype plugin indent on
+"filetype on
+"filetype indent on
+"autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+"autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
+"
