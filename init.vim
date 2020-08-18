@@ -21,6 +21,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'captbaritone/better-indent-support-for-php-with-html'
   Plug 'valloric/matchtagalways'
+  Plug 'vim-airline/vim-airline'
+  Plug 'kien/ctrlp.vim'
   call plug#end()
 
 "colorscheme monokai
@@ -80,7 +82,8 @@ set laststatus=2
 set noshowmode
 set ruler
 set number
-
+"turnoff wrapping
+"set nowrap
 "for ruby
 "filetype plugin indent on
 "filetype on
@@ -88,3 +91,17 @@ set number
 "autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 "autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 "
+" Включаем светлый фон
+autocmd FileType markdown :set background=light
+" Включаем перенос строк, для текста он нужен
+autocmd FileType markdown :set wrap linebreak nolist
+" Включаем режим distraction-free, активируя Goyo
+autocmd FileType markdown :Goyo
+" Включаем проверку орфографии
+autocmd FileType markdown :set spell spelllang=ru_ru
+
+" Indents word-wrapped lines as much as the 'parent' line
+set breakindent
+" Ensures word-wrap does not split words
+set formatoptions=l
+set lbr
